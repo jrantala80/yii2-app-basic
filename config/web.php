@@ -6,10 +6,24 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'aliases' => [
+        '@pro5/core' => '@vendor/pro5-libs/pro5-core',
+        ],
     'components' => [
+        'composer' => [
+            'class' => '\pro5\core\components\Composer',
+            'dev' => true,
+            ],
+        'view' => [
+            'class' => '\pro5\core\components\View',
+            ],
+        'urlManager' => [
+            'showScriptName' => false,
+            'enablePrettyUrl' => true,
+            ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'ftt23432532gfg545',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
